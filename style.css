@@ -1,0 +1,230 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+    background-image: url('img/back.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.logo {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.logo img {
+    height: 50px;
+    width: 50px;
+    margin-right: 5px;
+}
+
+.logo h2 {
+   
+    font-size: 2rem; 
+    color: goldenrod; 
+    margin: 0; 
+    font-weight: bold;
+    font-family: Arial, sans-serif; 
+}
+/* Navbar styles */
+.navbar {
+    background-color: black;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: relative; 
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: whitesmoke;
+
+}
+
+.navlist {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.navlist ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navlist ul li {
+    margin-right: 20px;
+}
+
+.navlist ul li:last-child {
+    margin-right: 0;
+}
+
+.navlist ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    transition: background-color 0.3s;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.navlist ul li a:hover {
+    background-color: orangered;
+    transition: .5s;
+}
+
+.search-box {
+    margin-left: 20px; 
+}
+
+.search-box input[type="text"] {
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color:transparent;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+    text-align: center;
+    color: floralwhite; 
+}
+
+.content h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: goldenrod;
+}
+
+.content p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color:floralwhite;
+}
+
+.content .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.content .btn:hover {
+    background-color: #555;
+}
+footer {
+    text-align: center; 
+    background-color: rgba(0, 0, 0, 0.8); 
+    color: #fff; 
+    padding: 10px 0; 
+    position: fixed; 
+    width: 100%; 
+    bottom: 0; 
+
+}
+
+.checkbtn {
+    cursor: pointer;
+    float: right;
+    position: fixed;
+    right: 20px;
+    line-height: 80px;
+    margin-right: 40px;
+    color: whitesmoke;
+    font-size: 30px;
+    display: none;
+}
+#check{
+    display: none;
+}
+
+.checkbtn .fa-bars {
+    font-size: 2rem;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+
+
+    .navlist {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 60px;
+        left: 0;
+        right: 100%;
+        background-color: #2c3e50;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    #check:checked + .navbar .navlist {
+        
+        display: block;
+        
+    }
+
+    .navlist ul {
+        
+        flex-direction: column;
+        
+    }
+    .navlist ul li{
+        margin: 50px 0;
+        margin-bottom: 10px;
+        line-height: 30px;
+        display: flex;
+        font-size: 30px;
+    }
+    .navlist ul li a:hover {
+        background: none;
+        background-color: orangered;
+        
+    }
+    .checkbtn{
+        display: block; 
+        cursor: pointer;
+        padding: 2px;
+        position: fixed;
+        right: 0;
+        top: 0; 
+        z-index: 1100; 
+    }
+
+    .search-box {
+        display: none;
+       
+    }
+
+}
+
